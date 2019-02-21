@@ -1,0 +1,35 @@
+﻿@model Library.Models.View_Model.Catalog.AssetIndexModel
+@{
+    ViewData["Title"] = "Library Catalog Index";
+}
+
+<div id="assets">
+    <h3>Library Catalog</h3>
+    <div id="assetsTable">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Image</th>
+                    <th>Title</th>
+                    <th>Author / Director</th>
+                    <th>Dewey Call Numer</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var asset in Model.Assets)
+                {
+                    <tr class="assetRow">
+                        <td>
+                            <a asp-controller="Catalog" asp-action="Detail" asp-route-id="@asset.Id">
+                                <img src="@asset.ImageUrl" class="imageCell" />
+                            </a>                            
+                        </td>
+                        <td>@asset.Title</td>
+                        <td>@asset.AuthorOrDirector</td>
+                        <td>@asset.DeweyCallNumber</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
