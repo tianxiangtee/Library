@@ -1,0 +1,10 @@
+1. Whenever create a new page
+ -1. Create the new function url in controller
+ -2. Create a new view
+ -3. Create a new view model for it. (Consider what would like to show)
+
+
+ 2. Whenever create a services
+  -1. Create an interface
+  -2. Create the services
+  -3. Inject the services in startup.cs
