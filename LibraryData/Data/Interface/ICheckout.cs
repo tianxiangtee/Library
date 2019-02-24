@@ -7,20 +7,22 @@ namespace LibraryData.Data.Interface
 {
     public interface ICheckout
     {
-        IEnumerable<Checkout> GetAll();
-        Checkout GetById(int checkoutId);
         void Add(Checkout newCheckout);
-        void CheckOutItem(int assetId, int libraryCardId);
-        void CheckInItem(int assetId, int libraryCardId);
+        IEnumerable<Checkout> GetAll();
         IEnumerable<CheckoutHistory> GetCheckoutHistory(int id);
-        Checkout GetLatestCheckout(int assetId);
-
-        void PlaceHold(int assetId, int libraryCardId);
-        string GetCurrentHoldPatronName(int id);
-        DateTime GetCurrentHoldPlaced(int id);
         IEnumerable<Hold> GetCurrentHolds(int id);
 
+        Checkout GetById(int checkoutId);
+        Checkout GetLatestCheckout(int assetId);
+        string GetCurrentCheckoutPatron(int assetId);
+        string GetCurrentHoldPatronName(int id);
+        DateTime GetCurrentHoldPlaced(int id);
+
+        void CheckOutItem(int assetId, int libraryCardId);
+        void CheckInItem(int assetId);    
+        void PlaceHold(int assetId, int libraryCardId);        
         void MarkLost(int assetId);
         void MarkFound(int assetId);
+        bool IsCheckedOut(int assetId);
     }
 }
