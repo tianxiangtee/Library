@@ -1,7 +1,6 @@
 ﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification\ 
 for details on configuring this project to bundle and minify static web assets. */
-body {
-    padding-top: 50px;
+body {   
     padding-bottom: 20px;
 }
 
@@ -122,7 +121,7 @@ body {
 }
 
 #patrons{
-    background: url('/images/patron.jpeg') bottom left 15% no-repeat #555;
+    background: url('/images/patron.jpg') bottom left 15% no-repeat #555;
 }
 
 .branchInfo{
@@ -130,7 +129,7 @@ body {
 }
 
 #branches{
-    background: url('/images/bldg.jpeg') bottom right 15% no-repeat #555;
+    background: url('/images/bldg.jpg') bottom right 15% no-repeat #555;
 }
 
 #assets{

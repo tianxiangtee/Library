@@ -5,6 +5,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Models\View_Model\Patron - Copy\**" />
+    <Content Remove="Models\View_Model\Patron - Copy\**" />
+    <EmbeddedResource Remove="Models\View_Model\Patron - Copy\**" />
+    <None Remove="Models\View_Model\Patron - Copy\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.App" />
     <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.1.2" PrivateAssets="All" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="2.1.8" />
